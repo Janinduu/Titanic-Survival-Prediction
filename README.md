@@ -77,21 +77,21 @@ The inference code allows you to test whether a subject has ADHD or is healthy b
    - The model path points to the pre-trained classifier.
    - The scaler path refers to the weights used for standard scaling.
      
-You do not need to modify these paths unless you're using different models or scalers.
+   You do not need to modify these paths unless you're using different models or scalers.
 
 5. Setup the output CSV file path where the tested results will be saved. This new CSV file will contain three columns:
-   - `sessionID`: The log file name of the subject.
- 	 - `probability`: The probability that the subject belongs to the predicted class (ADHD or healthy).
-   - `pred_class`: The class predicted by the model (adhd or healthy).
+   + `sessionID`: The log file name of the subject.
+ 	 + `probability`: The probability that the subject belongs to the predicted class (ADHD or healthy).
+   + `pred_class`: The class predicted by the model (adhd or healthy).
      
    Assign the output path to the variable `output_csv`.
    
    Example:
    `output_csv = 'path/to/your/output/results.csv'`
 
-6. Special Note:
+**6. Special Note:**
    
-**If a subject has less than 30 trials after all preprocessing steps, they will not be included in the output CSV file**.
+   **If a subject has less than 30 trials after all preprocessing steps, they will not be included in the output CSV file**.
 
 7. After setting up the paths correctly, run the inference script by using the following command:
 
