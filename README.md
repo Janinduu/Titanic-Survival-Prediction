@@ -1,5 +1,5 @@
 # Titanic-Survival-Prediction
-# **1. Problem Background ** 
+**1. Problem Background ** 
 # The main task of this project is to build a classifier to distinguish ADHD from healthy subjects using data collected by the 5L eye tracker. However, the dataset provided was recorded using the older Tobii – x230 eye tracker, which Braingaze previously utilized.
 
 # Differences between the Eye Trackers:
