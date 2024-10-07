@@ -44,9 +44,32 @@ The inference code allows you to test whether a subject has ADHD or is healthy b
 #### Steps to Run Inference:
 1. Create a CSV file containing the list of subjects you want to test. This file should have a single column:
    - Column Name: `sessionID`(the name of the log file for each subject)
+     
+     Example CSV file format:
+     |   sessionID   | 
+     | ------------- | 
+     | subject1_log  | 
+     | subject2_log  | 
 
+2. Setup the CSV file path where the `sessionID` information is stored:
+   - Assign this path to the variable `csv_file` in the code
 
+     Example:
+     csv_file = 'path/to/your/test_subjects.csv'
 
+3. Set the log files folder path where the logs of subjects are stored. These log files contain the data that will be used for inference.
+   - Assign the path to the `logs_folder` variable.
+   - 
+     Example:
+     logs_folder = 'path/to/your/logs/folder'
+
+4. Model path and scaler path are already set up in the code:
+   - The model path points to the pre-trained classifier.
+   - The scaler path refers to the weights used for standard scaling.
+     
+You do not need to modify these paths unless you're using different models or scalers.
+
+5. 
 
 
 
