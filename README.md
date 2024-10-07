@@ -1,6 +1,6 @@
 # Titanic-Survival-Prediction
 
-## **1. Problem Background** 
+## **Problem Background** 
 
 The main task of this project is to build a classifier to distinguish ADHD from healthy subjects using data collected by the 5L eye tracker. However, the dataset provided was recorded using the older Tobii – x230 eye tracker, which Braingaze previously utilized.
 
@@ -14,7 +14,7 @@ The goal is to classify data recorded by the 5L eye tracker, for which we have t
 
 This project will leverage both the eye movement logs and the head movement logs to ensure accurate ADHD classification.
 
-## **2. Create a conda Environment** 
+## **Create a conda Environment** 
 If you haven't installed Conda on your PC, please install it by following this [link](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html).
 
 Once successfully installed, you can proceed to create a Conda environment to run the project.
@@ -26,14 +26,14 @@ conda create --name synchronyClassifier
 
 Next, activate the conda environment by calling the below command. 
 
-## **3. Clone the GitHub Repository**
+## **Clone the GitHub Repository**
 Next clone the github repo by running the following command in your terminal after navigating into a preferred location. Or download the zip from github repo. 
 
 ``` 
 git clone https://github.com/BGunofficial/ADHD
 ```
 
-## **4. Install required libraries**
+## **Install required libraries**
 Make sure your Conda environment is activated. If not, activate it using the command mentioned earlier. Then, navigate to the project folder:
 
 ```
@@ -46,7 +46,7 @@ Once you are in the correct directory and activate the conda environment run thi
 pip install -r requirements.txt
 ```
 
-## **5. Running Inference on New Subjects**
+## **Running Inference on New Subjects**
 The inference code allows you to test whether a subject has ADHD or is healthy based on a pre-trained model. The script provides the probability of the subject belonging to either class and saves the results in a CSV file.
 
 #### Steps to Run Inference:
