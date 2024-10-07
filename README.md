@@ -15,11 +15,14 @@ The goal is to classify data recorded by the 5L eye tracker, for which we have t
 This project will leverage both the eye movement logs and the head movement logs to ensure accurate ADHD classification.
 
 ## **2. Create a conda Environment** 
-If you haven't installed Conda on your PC, please install it by following this link.
-(https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html)
+If you haven't installed Conda on your PC, please install it by following this [link](https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html).
 
 Once successfully installed, you can proceed to create a Conda environment to run the project.
 Let's say name of the environment is 'synchronyClassifier'. 
 
 > conda create --name synchronyClassifier
+
+Next, activate the conda environment by calling the below command. 
+
+> conda activate synchronyClassifier
 
