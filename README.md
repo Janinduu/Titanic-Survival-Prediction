@@ -20,7 +20,7 @@ If you haven't installed Conda on your PC, please install it by following this [
 Once successfully installed, you can proceed to create a Conda environment to run the project.
 Let's say name of the environment is 'synchronyClassifier'. 
 
-> conda create --name synchronyClassifier
+`conda create --name synchronyClassifier`
 
 Next, activate the conda environment by calling the below command. 
 
@@ -39,7 +39,4 @@ Once you are in the correct directory and activate the conda environment run thi
 > pip install -r requirements.txt
 
 
-
-
-> conda activate synchronyClassifier
 
