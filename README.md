@@ -22,23 +22,29 @@ Let's say name of the environment is 'synchronyClassifier'.
 
 ``` 
 conda create --name synchronyClassifier
- ```
+```
 
 Next, activate the conda environment by calling the below command. 
 
 ## **3. Clone the GitHub Repository**
 Next clone the github repo by running the following command in your terminal after navigating into a preferred location. Or download the zip from github repo. 
 
-`git clone https://github.com/BGunofficial/ADHD`
+``` 
+git clone https://github.com/BGunofficial/ADHD
+```
 
 ## **4. Install required libraries**
 Make sure your Conda environment is activated. If not, activate it using the command mentioned earlier. Then, navigate to the project folder:
 
-`cd synchronyClassifier`
+```
+cd synchronyClassifier
+```
 
 Once you are in the correct directory and activate the conda environment run this command to install the required libraries
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 ## **5. Running Inference on New Subjects**
 The inference code allows you to test whether a subject has ADHD or is healthy based on a pre-trained model. The script provides the probability of the subject belonging to either class and saves the results in a CSV file.
@@ -46,26 +52,31 @@ The inference code allows you to test whether a subject has ADHD or is healthy b
 #### Steps to Run Inference:
 1. Create a CSV file containing the list of subjects you want to test. This file should have a single column:
    - Column Name: `sessionID`(the name of the log file for each subject)
-     
+   ```
      Example CSV file format:
      |   sessionID   |  
      | ------------- | 
      | subject1_log  | 
      | subject2_logl |
+   ```
      
-2. Setup the CSV file path where the `sessionID` information is stored:
+3. Setup the CSV file path where the `sessionID` information is stored:
    - Assign this path to the variable `csv_file` in the code
 
      Example:
+     ```
      csv_file = 'path/to/your/test_subjects.csv'
+     ```
 
-3. Set the log files folder path where the logs of subjects are stored. These log files contain the data that will be used for inference.
+4. Set the log files folder path where the logs of subjects are stored. These log files contain the data that will be used for inference.
    - Assign the path to the `logs_folder` variable.
    - 
      Example:
+     ```
      logs_folder = 'path/to/your/logs/folder'
+     ```
 
-4. Model path and scaler path are already set up in the code:
+5. Model path and scaler path are already set up in the code:
    - The model path points to the pre-trained classifier.
    - The scaler path refers to the weights used for standard scaling.
      
