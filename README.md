@@ -4,7 +4,7 @@
 
 The main task of this project is to build a classifier to distinguish ADHD from healthy subjects using data collected by the 5L eye tracker. However, the dataset provided was recorded using the older Tobii – x230 eye tracker, which Braingaze previously utilized.
 
-## *Differences between the Eye Trackers:*
+### *Differences between the Eye Trackers:*
  - Tobii x230: During data collection, subjects were required to remain still using a chinrest.
  - Tobii 5L: In contrast, subjects are allowed to move their heads freely, as the data is recorded without a chinrest.
 
@@ -23,6 +23,23 @@ Let's say name of the environment is 'synchronyClassifier'.
 > conda create --name synchronyClassifier
 
 Next, activate the conda environment by calling the below command. 
+
+## **3. Clone the GitHub Repository**
+Next clone the github repo by running the following command in your terminal after navigating into a preferred location. Or download the zip from github repo. 
+
+> git clone https://github.com/BGunofficial/ADHD
+
+## **4. Install required libraries**
+Make sure your Conda environment is activated. If not, activate it using the command mentioned earlier. Then, navigate to the project folder:
+
+> cd synchronyClassifier
+
+Once you are in the correct directory and activate the conda environment run this command to install the required libraries
+
+> pip install -r requirements.txt
+
+
+
 
 > conda activate synchronyClassifier
 
