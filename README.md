@@ -46,11 +46,10 @@ The inference code allows you to test whether a subject has ADHD or is healthy b
    - Column Name: `sessionID`(the name of the log file for each subject)
      
      Example CSV file format:
-     |   sessionID   | 
-     | ------------- | 
-     | subject1_log  | 
-     | subject2_log  | 
-
+     |   sessionID   |  | |
+     | ------------- | ------------- |
+     | subject1_log  |  | |
+     | subject2_logl |  | |
 2. Setup the CSV file path where the `sessionID` information is stored:
    - Assign this path to the variable `csv_file` in the code
 
