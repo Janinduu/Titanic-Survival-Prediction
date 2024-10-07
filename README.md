@@ -20,7 +20,7 @@ If you haven't installed Conda on your PC, please install it by following this [
 Once successfully installed, you can proceed to create a Conda environment to run the project.
 Let's say name of the environment is 'synchronyClassifier'. 
 
-```conda create --name synchronyClassifier```
+`conda create --name synchronyClassifier`
 
 Next, activate the conda environment by calling the below command. 
 
@@ -37,6 +37,16 @@ Make sure your Conda environment is activated. If not, activate it using the com
 Once you are in the correct directory and activate the conda environment run this command to install the required libraries
 
 `pip install -r requirements.txt`
+
+## **5. Running Inference on New Subjects**
+The inference code allows you to test whether a subject has ADHD or is healthy based on a pre-trained model. The script provides the probability of the subject belonging to either class and saves the results in a CSV file.
+
+#### Steps to Run Inference:
+1. Create a CSV file containing the list of subjects you want to test. This file should have a single column:
+   - Column Name: `sessionID`(the name of the log file for each subject)
+
+
+
 
 
 
