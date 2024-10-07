@@ -52,6 +52,7 @@ The inference code allows you to test whether a subject has ADHD or is healthy b
 #### Steps to Run Inference:
 1. Create a CSV file containing the list of subjects you want to test. This file should have a single column:
    - Column Name: `sessionID`(the name of the log file for each subject)
+     
    ```
      Example CSV file format:
      |   sessionID   |  
@@ -64,17 +65,13 @@ The inference code allows you to test whether a subject has ADHD or is healthy b
    - Assign this path to the variable `csv_file` in the code
 
      Example:
-     ```
-     csv_file = 'path/to/your/test_subjects.csv'
-     ```
+     `csv_file = 'path/to/your/test_subjects.csv'`
 
 4. Set the log files folder path where the logs of subjects are stored. These log files contain the data that will be used for inference.
    - Assign the path to the `logs_folder` variable.
-   - 
+
      Example:
-     ```
-     logs_folder = 'path/to/your/logs/folder'
-     ```
+     `logs_folder = 'path/to/your/logs/folder'`
 
 5. Model path and scaler path are already set up in the code:
    - The model path points to the pre-trained classifier.
@@ -82,7 +79,23 @@ The inference code allows you to test whether a subject has ADHD or is healthy b
      
 You do not need to modify these paths unless you're using different models or scalers.
 
-5. 
+5. Setup the output CSV file path where the tested results will be saved. This new CSV file will contain three columns:
+   - `sessionID`: The log file name of the subject.
+ 	 - `probability`: The probability that the subject belongs to the predicted class (ADHD or healthy).
+   - `pred_class`: The class predicted by the model (adhd or healthy).
+     
+   Assign the output path to the variable `output_csv`.
+   
+   Example:
+   `output_csv = 'path/to/your/output/results.csv'`
 
+6. Special Note:
+   
+**If a subject has less than 30 trials after all preprocessing steps, they will not be included in the output CSV file**.
 
+7. After setting up the paths correctly, run the inference script by using the following command:
 
+```
+python inference.py
+```
+   
