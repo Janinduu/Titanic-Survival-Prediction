@@ -90,13 +90,12 @@ The inference code allows you to test whether a subject has ADHD or is healthy b
    Example:
    `output_csv = 'path/to/your/output/results.csv'`
 
-6. Special Note:
-   
-   **If a subject has less than 30 trials after all preprocessing steps, they will not be included in the output CSV file**.
-
-7. After setting up the paths correctly, run the inference script by using the following command:
+6. After setting up the paths correctly, run the inference script by using the following command:
 
 ```
 python inference.py
 ```
-   
+
+**If a subject has less than 30 trials after all preprocessing steps, they will not be included in the output CSV file**.
+
+
