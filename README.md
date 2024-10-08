@@ -99,7 +99,7 @@ python inference.py
 **If a subject has less than 30 trials after all preprocessing steps, they will not be included in the output CSV file**.
 
 
-## **Generating Feature, Label, and ID Vectors**
+## **Generating Data, Training, and Testing the Model**
 You can generate .npy files for feature vectors (X), label vectors (Y), and patient ID vectors (id_pat) for training, validation, and testing datasets. This process involves several Python scripts that are set up for data processing, feature extraction, and training.
 
 ### *Steps to Generate .npy Files:*
@@ -126,7 +126,6 @@ You can generate .npy files for feature vectors (X), label vectors (Y), and pati
    - `id_pat_training.npy` (Patient ID vector)
 
 
-
    ```
    # For Validation Set:
    python pre_processing.py --set validation
@@ -136,7 +135,6 @@ You can generate .npy files for feature vectors (X), label vectors (Y), and pati
    - `X_validation.npy` (Feature vector)
    - `Y_Validation.npy` (Label vector)
    - `id_pat_Validation.npy` (Patient ID vector)
-
 
 
    ```
@@ -149,8 +147,6 @@ You can generate .npy files for feature vectors (X), label vectors (Y), and pati
    - `Y_testing.npy` (Label vector)
    - `id_pat_testing.npy` (Patient ID vector)
 
-
-## **Training and Testing the Model**
 
 Once you have generated the `.npy` files, you can move on to training and testing the model.
 The `data_utils.py` script includes functions to load the `.npy` files into the model. Each function has docstrings and comments explaining its purpose.
