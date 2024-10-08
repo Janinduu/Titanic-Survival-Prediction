@@ -4,7 +4,7 @@
 
 The main task of this project is to build a classifier to distinguish ADHD from healthy subjects using data collected by the 5L eye tracker. However, the dataset provided was recorded using the older Tobii – x230 eye tracker, which Braingaze previously utilized.
 
-### *Differences between the Eye Trackers:*
+### **Differences between the Eye Trackers:**
  - Tobii x230: During data collection, subjects were required to remain still using a chinrest.
  - Tobii 5L: In contrast, subjects are allowed to move their heads freely, as the data is recorded without a chinrest.
 
@@ -114,9 +114,10 @@ You can generate .npy files for feature vectors (X), label vectors (Y), and pati
    
    **Running Preprocessing:**
    Run the following commands to generate `.npy` files for different datasets:
+
    
+   **For Training Set -**
    ```
-   # For Training Set:
    python pre_processing.py --set training
    ```
 
@@ -125,9 +126,9 @@ You can generate .npy files for feature vectors (X), label vectors (Y), and pati
    - `Y_training.npy` (Label vector)
    - `id_pat_training.npy` (Patient ID vector)
 
-
+   
+   **For Validation Set -** 
    ```
-   # For Validation Set:
    python pre_processing.py --set validation
    ```
 
@@ -136,9 +137,9 @@ You can generate .npy files for feature vectors (X), label vectors (Y), and pati
    - `Y_Validation.npy` (Label vector)
    - `id_pat_Validation.npy` (Patient ID vector)
 
-
+   
+   **For Testing Set -**
    ```
-   # For Testing Set:
    python pre_processing.py --set testing
    ```
 
