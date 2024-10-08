@@ -99,3 +99,93 @@ python inference.py
 **If a subject has less than 30 trials after all preprocessing steps, they will not be included in the output CSV file**.
 
 
+## **Generating Feature, Label, and ID Vectors**
+You can generate .npy files for feature vectors (X), label vectors (Y), and patient ID vectors (id_pat) for training, validation, and testing datasets. This process involves several Python scripts that are set up for data processing, feature extraction, and training.
+
+### *Steps to Generate .npy Files:*
+
+1. Data Cleaning and Feature Extraction:
+ - The file `BrainGaze_class.py` contains necessary functions to clean the log data and create a DataFrame.
+ - The file `get_gaze_features.py` includes functions to calculate features from the cleaned DataFrame, specifically calculating synchrony (the cosine of the angle between left and right eye gaze vectors).
+
+2. Preprocessing the Data:
+ - Use the `pre_processing_synchrony.py` script to generate the `.npy` files for training, validation, and testing datasets.
+ - The feature vector, label vector, and patient ID vector will be saved as `.npy` files in the `Using_synchrony` folder.
+   
+   **Running Preprocessing:**
+   Run the following commands to generate `.npy` files for different datasets:
+   
+   ```
+   # For Training Set:
+   python pre_processing.py --set training
+   ```
+
+   This will generate the following files:
+   - `X_training.npy` (Feature vector)
+   - `Y_training.npy` (Label vector)
+   - `id_pat_training.npy` (Patient ID vector)
+
+
+   ```
+   # For Validation Set:
+   python pre_processing.py --set validation
+   ```
+
+   This will generate the following files:
+   - `X_validation.npy` (Feature vector)
+   - `Y_Validation.npy` (Label vector)
+   - `id_pat_Validation.npy` (Patient ID vector)
+
+
+   ```
+   # For Testing Set:
+   python pre_processing.py --set testing
+   ```
+
+   This will generate the following files:
+   - `X_testing.npy` (Feature vector)
+   - `Y_testing.npy` (Label vector)
+   - `id_pat_testing.npy` (Patient ID vector)
+
+
+## **Training and Testing the Model**
+
+Once you have generated the `.npy` files, you can move on to training and testing the model.
+The `data_utils.py` script includes functions to load the `.npy` files into the model. Each function has docstrings and comments explaining its purpose.
+The `model_utils.py` file includes functions to:
+ - Train the model.
+ - Test the model on unseen data.
+ - Calculate performance metrics.
+ - Plot results.
+
+The `main.py` file includes the best hyperparameters found during hyperparameter tuning. Run the following command to train the model:
+
+```
+python main.py
+```
+
+### **Outputs:**
+
+Once you run the model, the following plots and metrics will be generated and saved in the `results` folder:
+
+ - AUC Curve: Displays behavior of the model during training.
+ - Probability Plot: Shows predicted probabilities for each subject, separated into ADHD and healthy classes.
+ - ROC Curve: Receiver Operating Characteristic curve for both training and testing datasets.
+ - Confusion Matrix: Displays model performance in terms of correctly and incorrectly classified subjects.
+ - Precision-Recall Curve: Graph of precision vs recall.
+ - Precision-Recall-Accuracy vs Threshold: Shows performance metrics at different classification thresholds.
+ - 
+Additionally, the results will be printed in the command line for both training and testing datasets.
+
+
+   
+   
+
+
+
+
+
+
+
+
+
