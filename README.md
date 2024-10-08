@@ -126,6 +126,7 @@ You can generate .npy files for feature vectors (X), label vectors (Y), and pati
    - `id_pat_training.npy` (Patient ID vector)
 
 
+
    ```
    # For Validation Set:
    python pre_processing.py --set validation
@@ -135,6 +136,7 @@ You can generate .npy files for feature vectors (X), label vectors (Y), and pati
    - `X_validation.npy` (Feature vector)
    - `Y_Validation.npy` (Label vector)
    - `id_pat_Validation.npy` (Patient ID vector)
+
 
 
    ```
